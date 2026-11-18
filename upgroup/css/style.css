@@ -142,7 +142,7 @@
     /*border: 3px solid black;*/
     display: grid;
     grid-template-columns: 2fr 9fr 2fr;
-    grid-template-rows: 100px 550px 100px;
+    grid-template-rows: 100px 1fr auto;
     grid-template-areas:
             "header header header"
             "left-menu center-menu right-menu"
