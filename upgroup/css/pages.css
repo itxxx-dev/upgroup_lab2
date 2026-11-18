@@ -1,0 +1,153 @@
+/* Базовые настройки для всех страниц */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Roboto Mono", monospace;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ШАПКА */
+header {
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;
+    background-color: rgb(5 168 175 / 0.65);
+    width: 100%;
+    height: 100px;
+    align-items: center;
+    justify-items: center;
+}
+
+.project-name {
+    grid-column: 2;
+    font-size: 33px;
+    font-weight: 700;
+    color: #000000;
+    text-align: center;
+}
+
+.to-main, .header-img {
+    grid-column: 3;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+
+/* ГЛАВНАЯ ЗОНА С ФОНОМ (Без боковых меню) */
+main {
+    flex-grow: 1; /* забирает всю оставшуюся высоту своего родителя бади */
+    background-image: url("../images/background-img.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 40px 10%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+/* ОФОРМЛЕНИЕ ТЕКСТА (Docs, Rules, About) */
+h2, h3, h4, h5 {
+    color: #000000;
+    margin-bottom: 15px;
+}
+
+/* Белая полупрозрачная подложка, чтобы текст читался поверх 3D-сферы */
+.blog-posts div, main > p, main > ul, main > ol, .video-container {
+    background-color: rgba(255, 255, 255, 0.65);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    margin-bottom: 25px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+ul, ol {
+    padding-left: 40px;
+    
+}
+
+li {
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.post-image {
+    border-radius: 8px;
+    margin-top: 15px;
+    max-width: 100%;
+    height: auto;
+}
+
+.breaking-line {
+    height: 1.5px;
+    background-color: rgba(0, 0, 0, 0.15);
+    margin: 20px 0;
+}
+
+/*ФОРМА АВТОРИЗАЦИИ (auth.html) */
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 40px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 400px;
+    align-self: center;
+    margin-top: 50px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.login, .password {
+    width: 100%;
+    height: 45px;
+    padding-left: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-family: "Roboto Mono", monospace;
+    font-size: 16px;
+    outline: none;
+}
+
+.login:focus, .password:focus {
+    border-color: rgb(5 168 175);
+}
+
+.submit-btn {
+    width: 100%;
+    height: 45px;
+    background-color: rgb(5 168 175 / 0.95);
+    color: black;
+    font-family: "Roboto Mono", monospace;
+    font-weight: 700;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.1s, background-color 0.2s;
+}
+
+.submit-btn:hover {
+    background-color: rgb(5 168 175 / 1);
+}
+
+.submit-btn:active {
+    transform: scale(0.98);
+}
+
+
+footer {
+    height: 100px;
+    background-color: rgb(5 168 175 / 0.65);
+    width: 100%;
+}
